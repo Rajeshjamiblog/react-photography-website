@@ -4,45 +4,39 @@ import "./Navbar.css";
 
 function Navbar() {
 
-    const menuItems = [
-        {
-            label: "Home",
-            link: "#home"
-        },
-        {
-            label: "About",
-            link: "#about"
-        },
-        {
-            label: "Gallery",
-            link: "#gallery"
-        },
-        {
-            label: "Services",
-            link: "#services"
-        },
-        {
-            label: "Contact",
-            link: "#contact"
-        }
-    ];
+    const navigation = siteConfig.navigation;
 
 
     return (
         <header className="navbar">
 
             <div className="navbar__logo">
-                {siteConfig.logoText}
+
+                {
+                    siteConfig.branding.logo.image ? (
+
+                        <img
+                            src={siteConfig.branding.logo.image}
+                            alt={siteConfig.branding.logo.alt}
+                        />
+
+                    ) : (
+
+                        siteConfig.branding.logo.text
+
+                    )
+                }
+
             </div>
 
 
             <nav className="navbar__menu">
 
                 {
-                    menuItems.map((item) => (
+                    navigation.map((item) => (
                         <a
-                            key={item.label}
-                            href={item.link}
+                            key={item.id}
+                            href={item.href}
                         >
                             {item.label}
                         </a>
