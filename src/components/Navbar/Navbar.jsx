@@ -4,6 +4,30 @@ import "./Navbar.css";
 
 function Navbar() {
 
+    const menuItems = [
+        {
+            label: "Home",
+            link: "#home"
+        },
+        {
+            label: "About",
+            link: "#about"
+        },
+        {
+            label: "Gallery",
+            link: "#gallery"
+        },
+        {
+            label: "Services",
+            link: "#services"
+        },
+        {
+            label: "Contact",
+            link: "#contact"
+        }
+    ];
+
+
     return (
         <header className="navbar">
 
@@ -11,23 +35,19 @@ function Navbar() {
                 {siteConfig.logoText}
             </div>
 
+
             <nav className="navbar__menu">
 
-                <a href="#">
-                    Home
-                </a>
-
-                <a href="#">
-                    About
-                </a>
-
-                <a href="#">
-                    Gallery
-                </a>
-
-                <a href="#">
-                    Contact
-                </a>
+                {
+                    menuItems.map((item) => (
+                        <a
+                            key={item.label}
+                            href={item.link}
+                        >
+                            {item.label}
+                        </a>
+                    ))
+                }
 
             </nav>
 
