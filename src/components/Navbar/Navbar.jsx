@@ -1,11 +1,7 @@
-import siteConfig from "../../config/siteConfig";
+import { branding, navigation } from "../../config";
 import "./Navbar.css";
 
-
 function Navbar() {
-
-    const navigation = siteConfig.navigation;
-
 
     return (
         <header className="navbar">
@@ -13,22 +9,21 @@ function Navbar() {
             <div className="navbar__logo">
 
                 {
-                    siteConfig.branding.logo.image ? (
+                    branding.logo.image ? (
 
                         <img
-                            src={siteConfig.branding.logo.image}
-                            alt={siteConfig.branding.logo.alt}
+                            src={branding.logo.image}
+                            alt={branding.logo.alt}
                         />
 
                     ) : (
 
-                        siteConfig.branding.logo.text
+                        branding.logo.text
 
                     )
                 }
 
             </div>
-
 
             <nav className="navbar__menu">
 
@@ -47,7 +42,6 @@ function Navbar() {
 
         </header>
     );
-
 }
 
 export default Navbar;
