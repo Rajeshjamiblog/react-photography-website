@@ -3,7 +3,7 @@ const branding = {
 
     logo: {
         text: "Artsy by Sam",
-        image: "/images/logo/logo.svg",
+        image: "",
         alt: "Artsy by Sam Logo"
     },
 

@@ -1,4 +1,4 @@
-import { branding, navigation } from "../../config";
+import { branding, navigation } from "@/config";
 import "./Navbar.css";
 
 function Navbar() {

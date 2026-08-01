@@ -1,4 +1,4 @@
-import galleryData from "../../data/galleryData";
+import galleryData from "@/data/galleryData";
 import "./Gallery.css";
 
 

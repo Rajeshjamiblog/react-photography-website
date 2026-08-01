@@ -1,4 +1,4 @@
-import servicesData from "../../data/servicesData";
+import servicesData from "@/data/servicesData";
 import "./Services.css";
 
 
