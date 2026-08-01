@@ -1,6 +1,6 @@
 .hero {
 
-    min-height: 80vh;
+    min-height: 90vh;
 
     display: flex;
 
@@ -10,12 +10,40 @@
 
     text-align: center;
 
-    background: #f5f5f5;
+    position: relative;
+
+    background-image:
+        url("/images/hero-placeholder.svg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+
+/* Dark overlay */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.45);
 
 }
 
 
 .hero__content {
+
+    position: relative;
+
+    z-index: 1;
 
     max-width: 700px;
 
@@ -42,13 +70,13 @@
 
 .hero button {
 
-    padding: 14px 32px;
+    padding: 14px 35px;
 
     border: none;
 
-    background: black;
+    background: white;
 
-    color: white;
+    color: black;
 
     cursor: pointer;
 
