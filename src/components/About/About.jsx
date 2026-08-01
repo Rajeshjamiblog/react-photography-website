@@ -26,7 +26,7 @@ function About() {
             <div className="about__image">
 
                 <img
-                    src="/images/about-placeholder.svg"
+                    src="/images/about/about-01.svg"
                     alt="Photographer"
                 />
 

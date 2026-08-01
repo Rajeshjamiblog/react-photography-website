@@ -46,6 +46,11 @@ const siteConfig = {
         }
     ],
 
+    images: {
+        hero: "/images/hero/hero-01.jpg",
+        about: "/images/about/about-01.jpg"
+    },
+
     social: {
         instagram: "",
         facebook: "",
