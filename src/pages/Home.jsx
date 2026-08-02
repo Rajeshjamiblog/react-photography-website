@@ -1,8 +1,8 @@
-import Navbar from "@/components/Navbar/Navbar";
-import Hero from "@/components/Hero/Hero";
-import About from "@/components/About/About";
-import Gallery from "@/components/Gallery/Gallery";
-import Services from "@/components/Services/Services";
+import Navbar from "@/components/layout/Navbar/Navbar";
+import Hero from "@/components/sections/Hero/Hero";
+import About from "@/components/sections/About/About";
+import Gallery from "@/components/sections/Gallery/Gallery";
+import Services from "@/components/sections/Services/Services";
 
 function Home() {
 
