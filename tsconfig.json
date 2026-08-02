@@ -1,13 +1,24 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "checkJs": false,
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
     "module": "ESNext",
     "moduleResolution": "Bundler",
+
     "jsx": "react-jsx",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+
+    "allowJs": true,
+    "checkJs": false,
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "include": ["src"]
 }
