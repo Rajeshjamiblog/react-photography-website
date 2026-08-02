@@ -1,8 +1,14 @@
 import { branding } from "@/config";
-import "./Hero.css";
 import Button from "@/components/ui/Button";
+import "./Hero.css";
+
 
 function Hero() {
+
+    function handlePortfolioClick() {
+        console.log("Opening portfolio");
+    }
+
     return (
         <section className="hero">
 
@@ -16,7 +22,8 @@ function Hero() {
                     Capturing beautiful moments that last forever
                 </p>
 
-                <Button>
+                <Button variant="outline" 
+                        onClick={handlePortfolioClick}>
                     View Portfolio
                 </Button>
 
