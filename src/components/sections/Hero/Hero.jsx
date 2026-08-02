@@ -1,5 +1,6 @@
 import { branding } from "@/config";
 import "./Hero.css";
+import Button from "@/components/ui/Button";
 
 function Hero() {
     return (
@@ -15,9 +16,9 @@ function Hero() {
                     Capturing beautiful moments that last forever
                 </p>
 
-                <button>
+                <Button>
                     View Portfolio
-                </button>
+                </Button>
 
             </div>
 
