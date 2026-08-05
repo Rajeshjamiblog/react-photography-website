@@ -2,27 +2,27 @@ const navigation = [
     {
         id: 1,
         label: "Home",
-        href: "#home"
+        path: "/"
     },
     {
         id: 2,
         label: "About",
-        href: "#about"
+        path: "/about"
     },
     {
         id: 3,
         label: "Gallery",
-        href: "#gallery"
+        path: "/gallery"
     },
     {
         id: 4,
         label: "Services",
-        href: "#services"
+        path: "/services"
     },
     {
         id: 5,
         label: "Contact",
-        href: "#contact"
+        path: "/contact"
     }
 ];
 

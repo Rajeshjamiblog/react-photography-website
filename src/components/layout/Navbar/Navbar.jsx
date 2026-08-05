@@ -1,47 +1,36 @@
-import { branding, navigation } from "@/config";
+import Container from "@/components/layout/Container/Container";
+import navigation from "@/config/navigation";
 import "./Navbar.css";
 
 function Navbar() {
 
     return (
-        <header className="navbar">
+        <nav className="navbar">
 
-            <div className="navbar__logo">
+            <Container className="navbar__container">
 
-                {
-                    branding.logo.image ? (
+                <div className="navbar__logo">
+                    PHOTOGRAPHY
+                </div>
 
-                        <img
-                            src={branding.logo.image}
-                            alt={branding.logo.alt}
-                        />
+                <ul className="navbar__menu">
+                    {
+                        navigation.map((item) => (
+                            <li
+                                key={item.id}
+                                className="navbar__menuItem"
+                            >
+                                {item.label}
+                            </li>
+                        ))
+                    }
+                </ul>
 
-                    ) : (
+            </Container>
 
-                        branding.logo.text
-
-                    )
-                }
-
-            </div>
-
-            <nav className="navbar__menu">
-
-                {
-                    navigation.map((item) => (
-                        <a
-                            key={item.id}
-                            href={item.href}
-                        >
-                            {item.label}
-                        </a>
-                    ))
-                }
-
-            </nav>
-
-        </header>
+        </nav>
     );
+
 }
 
 export default Navbar;
