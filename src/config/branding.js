@@ -8,8 +8,8 @@ const branding = {
     },
 
     images: {
-        hero: "/images/hero/hero-01.jpg",
-        about: "/images/about/about-01.jpg"
+        hero: "/images/hero/hero-01.svg",
+        about: "/images/about/about-01.svg"
     }
 };
 
