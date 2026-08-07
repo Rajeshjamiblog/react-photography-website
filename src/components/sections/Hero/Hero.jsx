@@ -4,11 +4,7 @@ import Button from "@/components/ui/Button";
 import "./Hero.css";
 
 
-function Hero() {
-
-    function handlePortfolioClick() {
-        console.log("Opening portfolio");
-    }
+function Hero({ onPortfolioClick = () => {} }) {
 
     return (
         <section className="hero"
@@ -29,7 +25,7 @@ function Hero() {
 
                     <div className="hero__actions">
                         <Button variant="outline"
-                                onClick={handlePortfolioClick}>
+                                onClick={onPortfolioClick}>
                             {hero.buttonText}
                         </Button>
                     </div>
