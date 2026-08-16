@@ -1,56 +1,44 @@
-import galleryData from "@/data/galleryData";
+import { gallery } from "@/config";
+import Container from "@/components/layout/Container/Container";
 import "./Gallery.css";
-
 
 function Gallery() {
 
-
     return (
-
         <section className="gallery">
 
+            <Container className="gallery__container">
 
-            <h2>
-                Our Gallery
-            </h2>
+                <div className="gallery__content">
 
+                    <h2 className="gallery__title">
+                        {gallery.title}
+                    </h2>
 
-            <div className="gallery__grid">
+                    <div className="gallery__grid">
 
+                        {
+                            gallery.images.map((image) => (
+                                <div
+                                    key={image.id}
+                                    className="gallery__item"
+                                >
+                                    <img
+                                        src={image.src}
+                                        alt={image.alt}
+                                    />
+                                </div>
+                            ))
+                        }
 
-                {
-                    galleryData.map((item) => (
+                    </div>
 
-                        <div 
-                            className="gallery__card"
-                            key={item.id}
-                        >
+                </div>
 
-                            <img
-                                src={item.image}
-                                alt={item.title}
-                            />
-
-
-                            <h3>
-                                {item.title}
-                            </h3>
-
-
-                        </div>
-
-                    ))
-                }
-
-
-            </div>
-
+            </Container>
 
         </section>
-
     );
-
 }
-
 
 export default Gallery;
