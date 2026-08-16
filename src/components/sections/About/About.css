@@ -1,52 +1,41 @@
 .about {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 50px;
-
-    padding: 80px 60px;
-
+    padding: 80px 0;
 }
-
 
 .about__content {
-
-    flex: 1;
-
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
-
-
-.about__content h2 {
-
-    font-size: 40px;
-
-    margin-bottom: 20px;
-
-}
-
-
-.about__content p {
-
-    font-size: 18px;
-
-    line-height: 1.6;
-
-}
-
 
 .about__image {
-
     flex: 1;
-
 }
 
-
 .about__image img {
-
     width: 100%;
-
     border-radius: 10px;
+}
+
+.about__text {
+    flex: 1;
+}
+
+.about__title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about__description {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+    .about__content {
+        flex-direction: column;
+        gap: 32px;
+    }
 
 }

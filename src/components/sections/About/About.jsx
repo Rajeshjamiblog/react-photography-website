@@ -1,3 +1,5 @@
+import { branding, about } from "@/config";
+import Container from "@/components/layout/Container/Container";
 import "./About.css";
 
 
@@ -7,30 +9,37 @@ function About() {
 
         <section className="about">
 
-            <div className="about__content">
+            <Container className="about__container">
 
-                <h2>
-                    About Artsy by Sam
-                </h2>
+                <div className="about__content">
+                    
+                    <div className="about__image">
+
+                        <img
+                            src={branding.images.about}
+                            alt={branding.siteName}
+                        />
+
+                    </div>
+
+                    <div className="about__text">
+
+                        <h2 className="about__title">
+                            {about.title}
+                        </h2>
+
+                        <p className="about__description">
+                            {about.description}
+                        </p>
+                    </div>
 
 
-                <p>
-                    We capture beautiful moments,
-                    emotions and stories through
-                    professional photography.
-                </p>
-
-            </div>
+                </div>
 
 
-            <div className="about__image">
+                
 
-                <img
-                    src="/images/about/about-01.svg"
-                    alt="Photographer"
-                />
-
-            </div>
+            </Container>
 
         </section>
 
