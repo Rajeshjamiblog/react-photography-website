@@ -1,0 +1,37 @@
+.footer {
+    padding: 60px 0;
+    background: #111;
+    color: white;
+}
+
+.footer__content {
+    text-align: center;
+}
+
+.footer__brand {
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.footer__description {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto 24px;
+}
+
+.footer__copyright {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 40px 0;
+    }
+
+}

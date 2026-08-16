@@ -4,6 +4,7 @@ import About from "@/components/sections/About";
 import Gallery from "@/components/sections/Gallery";
 import Services from "@/components/sections/Services";
 import Contact from "@/components/sections/Contact/Contact";
+import Footer from "@/components/layout/Footer/Footer";
 
 function Home() {
 
@@ -20,6 +21,8 @@ function Home() {
             <Services />
 
             <Contact />
+
+            <Footer />
 
         </>
     );

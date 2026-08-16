@@ -7,3 +7,4 @@ export { default as hero } from "./hero";
 export { default as about } from "./about";
 export { default as gallery } from "./gallery";
 export { default as services } from "./services";
+export { default as footer } from "./footer";
