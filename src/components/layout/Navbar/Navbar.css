@@ -1,39 +1,78 @@
 .navbar {
-    width: 100%;
     padding: 20px 0;
-
-    border-bottom: 1px solid #e5e5e5;
+    background: white;
 }
 
 .navbar__container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .navbar__logo {
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: 700;
 }
+
 
 .navbar__menu {
     display: flex;
+    align-items: center;
     gap: 32px;
     list-style: none;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
+
 
 .navbar__menuItem {
-    font-size: 16px;
     cursor: pointer;
-    transition: color 0.3s ease;
-    padding: 12px 16px;
-    display: block;
+    font-size: 16px;
 }
 
-.navbar__menuItem:hover {
-    color: #666;
+
+/* Hide mobile button on desktop */
+.navbar__toggle {
+    display: none;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .navbar__toggle {
+        display: block;
+        border: none;
+        background: transparent;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+
+    .navbar__menu {
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        gap: 20px;
+
+        background: white;
+        padding: 30px 0;
+
+        display: none;
+    }
+
+
+    .navbar__menu--open {
+        display: flex;
+    }
+
+
+    .navbar__menuItem {
+        font-size: 18px;
+    }
+
 }

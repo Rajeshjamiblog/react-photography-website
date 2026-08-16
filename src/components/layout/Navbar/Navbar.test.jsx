@@ -1,14 +1,14 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 
 import Navbar from "./Navbar";
 import navigation from "@/config/navigation";
 
+
 describe("Navbar", () => {
 
-    it("renders Navbar", () => {
+    it("renders Navbar logo", () => {
 
-        // Render Navbar
         render(<Navbar />);
 
         // Check logo is present
@@ -18,9 +18,9 @@ describe("Navbar", () => {
 
     });
 
+
     it("renders all navigation menu items", () => {
 
-        // Render Navbar
         render(<Navbar />);
 
         // Verify all navigation items are rendered
@@ -31,6 +31,79 @@ describe("Navbar", () => {
             expect(menuItem).toBeInTheDocument();
 
         });
+
+    });
+
+
+    it("opens mobile menu when toggle button is clicked", () => {
+
+        render(<Navbar />);
+
+        const toggleButton = screen.getByRole("button", {
+            name: "Toggle navigation menu"
+        });
+
+
+        // Open menu
+        fireEvent.click(toggleButton);
+
+
+        expect(
+            screen.getByText("Home")
+        ).toBeInTheDocument();
+
+
+        expect(
+            screen.getByText("Contact")
+        ).toBeInTheDocument();
+
+    });
+
+
+    it("changes toggle button icon when menu is opened", () => {
+
+        render(<Navbar />);
+
+        const toggleButton = screen.getByRole("button", {
+            name: "Toggle navigation menu"
+        });
+
+
+        expect(toggleButton)
+            .toHaveTextContent("☰");
+
+
+        fireEvent.click(toggleButton);
+
+
+        expect(toggleButton)
+            .toHaveTextContent("✕");
+
+    });
+
+
+    it("closes menu when navigation item is clicked", () => {
+
+        render(<Navbar />);
+
+        const toggleButton = screen.getByRole("button", {
+            name: "Toggle navigation menu"
+        });
+
+
+        // Open menu
+        fireEvent.click(toggleButton);
+
+
+        // Click navigation item
+        fireEvent.click(
+            screen.getByText("Home")
+        );
+
+
+        // Button should return to closed state
+        expect(toggleButton)
+            .toHaveTextContent("☰");
 
     });
 
