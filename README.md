@@ -1,48 +1,71 @@
 # 📸 React Photography Portfolio
 
-A modern, responsive photography portfolio website built from scratch using **React** and **Vite**.
+A modern, responsive photography portfolio website built using **React** and **Vite**.
 
-This project is developed step by step while learning React concepts and applying them by building a real-world production-style application.
+This project was developed step by step to learn React concepts while building a real-world production-style website with reusable components, responsive design, testing, Git workflow, and deployment.
 
 ---
 
-## 🚀 Project Goal
+## 🌐 Live Demo
 
-The goal of this project is to:
+🚀 https://react-photography-website.vercel.app/
 
-- Learn React from scratch
-- Understand component-based architecture
-- Build a professional photography portfolio website
-- Create reusable UI components
-- Practice configuration-driven development
-- Write component-level tests
-- Learn Git and GitHub workflows
-- Deploy the application using Vercel
+---
+
+## 📌 Project Overview
+
+The goal of this project is to create a professional photography portfolio website that includes:
+
+- Modern responsive UI
+- Reusable React components
+- Clean project architecture
+- Config-driven content management
+- Component testing
+- Git feature branch workflow
+- Production deployment using Vercel
 
 ---
 
 # ✨ Features
 
-## Website Sections
+## Navigation
 
-- ✅ Responsive Navbar
-- ✅ Hero section with background image
-- ✅ About section
-- ✅ Photography Gallery
-- ✅ Services section
-- ✅ Contact section
-- ✅ Footer section
+- Responsive navigation bar
+- Desktop menu
+- Mobile hamburger menu
+- Mobile menu open/close functionality
 
-## Development Features
+## Hero Section
 
-- ✅ Component-based architecture
-- ✅ Reusable Container component
-- ✅ Reusable Button component
-- ✅ Configuration-driven content
-- ✅ BEM CSS naming convention
-- ✅ Responsive design
-- ✅ Component testing with Vitest
-- ✅ React Testing Library integration
+- Professional landing section
+- Photography branding
+- Call-to-action area
+
+## About Section
+
+- Photographer introduction
+- Image and description layout
+- Responsive design
+
+## Gallery Section
+
+- Photography image grid
+- Dynamic image rendering from configuration
+
+## Services Section
+
+- Photography service cards
+- Responsive layout
+
+## Contact Section
+
+- Contact information display
+- Call-to-action content
+
+## Footer Section
+
+- Branding information
+- Copyright section
 
 ---
 
@@ -63,12 +86,9 @@ The goal of this project is to:
 
 ## Development Tools
 
-- Node.js
-- npm
-- ESLint
+- VS Code
 - Git
 - GitHub
-- VS Code
 
 ## Deployment
 
@@ -80,53 +100,34 @@ The goal of this project is to:
 
 ```text
 react-photography-website/
-│
+
 ├── public/
 │   └── images/
 │
 ├── src/
+│
+│   ├── assets/
 │   │
 │   ├── components/
-│   │   │
+│   │
 │   │   ├── layout/
-│   │   │   │
 │   │   │   ├── Navbar/
-│   │   │   │   ├── Navbar.jsx
-│   │   │   │   ├── Navbar.css
-│   │   │   │   └── Navbar.test.jsx
-│   │   │   │
-│   │   │   ├── Container/
-│   │   │   │   ├── Container.jsx
-│   │   │   │   ├── Container.css
-│   │   │   │   └── Container.test.jsx
-│   │   │   │
-│   │   │   └── Footer/
-│   │   │       ├── Footer.jsx
-│   │   │       ├── Footer.css
-│   │   │       └── Footer.test.jsx
-│   │   │
+│   │   │   ├── Footer/
+│   │   │   └── Container/
+│   │
 │   │   ├── sections/
-│   │   │   │
 │   │   │   ├── Hero/
 │   │   │   ├── About/
 │   │   │   ├── Gallery/
 │   │   │   ├── Services/
 │   │   │   └── Contact/
-│   │   │
+│   │
 │   │   └── ui/
 │   │       └── Button/
 │   │
 │   ├── config/
-│   │   ├── branding.js
-│   │   ├── hero.js
-│   │   ├── about.js
-│   │   ├── gallery.js
-│   │   ├── services.js
-│   │   ├── contact.js
-│   │   └── footer.js
 │   │
 │   ├── pages/
-│   │   └── Home/
 │   │
 │   ├── App.jsx
 │   ├── main.jsx
@@ -139,188 +140,18 @@ react-photography-website/
 
 ---
 
-# 🧩 Component Architecture
-
-The application follows a reusable component structure.
-
-Example:
-
-```
-Home
-│
-├── Navbar
-│
-├── Hero
-│
-├── About
-│
-├── Gallery
-│
-├── Services
-│
-├── Contact
-│
-└── Footer
-```
-
-Each section contains:
-
-```
-Component
-│
-├── JSX
-├── CSS
-└── Test
-```
-
-Example:
-
-```
-Hero/
-│
-├── Hero.jsx
-├── Hero.css
-└── Hero.test.jsx
-```
-
----
-
-# 🎨 Styling Approach
-
-The project follows:
-
-## BEM Naming Convention
-
-Example:
-
-```css
-.hero
-
-.hero__title
-
-.hero__subtitle
-
-.hero__actions
-```
-
-Benefits:
-
-- Clear CSS structure
-- Avoids naming conflicts
-- Easier maintenance
-
----
-
-# ⚙️ Configuration Driven Development
-
-Website content is separated from components.
-
-Example:
-
-```
-config/
-│
-├── hero.js
-├── about.js
-├── services.js
-└── contact.js
-```
-
-Instead of:
-
-```jsx
-<h1>
-Photography Studio
-</h1>
-```
-
-Content comes from:
-
-```javascript
-branding.siteName
-```
-
-Benefits:
-
-- Easy content updates
-- Cleaner components
-- Better scalability
-
----
-
 # 🧪 Testing
 
-Testing is implemented using:
+The project uses **Vitest** and **React Testing Library**.
 
-- Vitest
-- React Testing Library
-
-
-## Current Test Status
+Current test coverage:
 
 ```
 Test Files: 9 passed
-Tests: 28 passed
+Tests:      31 passed
 ```
 
-## Covered Components
-
-| Component | Tests |
-|---|---:|
-| Container | 2 |
-| Navbar | 2 |
-| Button | 4 |
-| Hero | 4 |
-| About | 3 |
-| Gallery | 3 |
-| Services | 3 |
-| Contact | 4 |
-| Footer | 3 |
-| Total | 28 |
-
----
-
-# ▶️ Getting Started
-
-## Clone Repository
-
-```bash
-git clone https://github.com/<your-github-username>/react-photography-website.git
-```
-
----
-
-## Navigate to Project
-
-```bash
-cd react-photography-website
-```
-
----
-
-## Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-## Start Development Server
-
-```bash
-npm run dev
-```
-
-Application will start:
-
-```
-http://localhost:5173
-```
-
----
-
-## Run Tests
+Run tests:
 
 ```bash
 npm run test
@@ -328,89 +159,124 @@ npm run test
 
 ---
 
+# 🚀 Getting Started
+
+## Clone Repository
+
+```bash
+git clone https://github.com/<your-github-username>/react-photography-website.git
+```
+
+## Navigate to Project
+
+```bash
+cd react-photography-website
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Start Development Server
+
+```bash
+npm run dev
+```
+
+Application runs at:
+
+```
+http://localhost:5173
+```
+
+---
+
+# 📦 Production Build
+
+Create production build:
+
+```bash
+npm run build
+```
+
+Output:
+
+```
+dist/
+```
+
+---
+
 # 🌿 Git Workflow
 
-This project follows a feature branch workflow.
+This project follows feature branch workflow.
 
 Example:
 
-```
+```text
 main
-│
-├── feature/navbar
-│
-├── feature/hero
-│
-├── feature/about
-│
-├── feature/gallery
-│
-├── feature/services
-│
-├── feature/contact
-│
-└── feature/footer
+
+ |
+ |
+feature/navbar
+
+ |
+ |
+feature/services
+
+ |
+ |
+feature/contact
 ```
 
 Workflow:
 
 ```bash
-git checkout -b feature/example
+git checkout -b feature/new-feature
 
 git add .
 
-git commit -m "feat: add example"
+git commit -m "feat: add new feature"
 
 git checkout main
 
-git merge feature/example
+git merge feature/new-feature
 
 git push
 ```
 
 ---
 
-# 📅 Development Progress
+# 📈 Development Progress
 
 ## Completed
 
-- [x] Repository Created
+- [x] Repository Setup
 - [x] React + Vite Setup
 - [x] Project Structure
-- [x] Navbar
+- [x] Navbar Component
+- [x] Responsive Mobile Navbar
 - [x] Hero Section
 - [x] About Section
 - [x] Gallery Section
 - [x] Services Section
 - [x] Contact Section
 - [x] Footer Section
-- [x] Responsive Layout
 - [x] Component Testing
+- [x] Responsive Styling
+- [x] Vercel Deployment
 
-## Upcoming
+## Future Improvements
 
-- [ ] Mobile hamburger menu
-- [ ] Testimonials section
-- [ ] Gallery lightbox
-- [ ] Contact form
-- [ ] Form validation
-- [ ] SEO optimization
-- [ ] Image optimization
-- [ ] Deployment to Vercel
-
----
-
-# 🚀 Future Improvements
-
-Planned enhancements:
-
-- Add animations
-- Add dark/light theme
-- Add image filtering
-- Add backend contact API
-- Add CMS integration
-- Improve accessibility
-- Add performance optimization
+- [ ] Gallery Lightbox
+- [ ] Image Slider
+- [ ] Animations
+- [ ] SEO Optimization
+- [ ] Contact Form Backend
+- [ ] Custom Domain
+- [ ] Performance Optimization
 
 ---
 
@@ -418,6 +284,9 @@ Planned enhancements:
 
 **Rajesh Jami**
 
+Full Stack Developer  
+Java | Spring Boot | React | Microservices
+
 ---
 
-⭐ This project represents my journey of learning React by building a real-world photography portfolio application using modern frontend development practices.
+⭐ This project represents my journey of learning React by building a real-world photography portfolio application.
